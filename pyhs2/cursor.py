@@ -219,7 +219,7 @@ class Cursor(object):
 
     def _fetch(self, rows, fetchReq):
         resultsRes = self.client.FetchResults(fetchReq)
-        if resultsRes:
+        if resultsRes.results:
             for row in resultsRes.results.rows:
                 rowData= []
                 for i, col in enumerate(row.colVals):
